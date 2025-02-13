@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', () => {
         [0, 4, 8], [2, 4, 6]
     ];
 
-    // Load saved game state
     const loadSavedGame = () => {
         const savedBoard = localStorage.getItem('storedBoard');
         const savedPlayer = localStorage.getItem('storedPlayer');
@@ -40,7 +39,6 @@ window.addEventListener('DOMContentLoaded', () => {
         turnIndicator.innerText = activePlayer;
     };
 
-    // Save current game state
     const saveCurrentGame = () => {
         localStorage.setItem('storedBoard', JSON.stringify(gameBoard));
         localStorage.setItem('storedPlayer', activePlayer);
